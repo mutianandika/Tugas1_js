@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas 2</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        margin: 2px;
+        padding: 5px;
+        height: 87vh;
+        width: 60%;
+        background-color: aliceblue;
+        border: black 2px solid;
+    }
+    #container {
+        width: 450px;
+        height: 80vh;
+        flex-direction: column;
+    }
+    h1 {
+        margin: 3px;
+        padding: 3px;
+        margin-bottom: 4px;
+    }
+    input {
+        width: 116vh;
+    }
+</style>
+<body>
+<div id="container">
+    <h1>CHAT</h1>
+    <div id="Chat">
+
+    </div>
+    </div>
+</div>
+<div>
+    <div id="input">
+        <input type="text" id="message">
+        <button onclick="kirim();">Kirim</button>
+    </div>
+</div>
+
+    <script>
+        function kirim() {
+        var isiChat = document.getElementById("message").value; 
+        var node = document.createElement("container");                 
+        var textnode = document.createTextNode(isiChat);        
+        node.appendChild(textnode);                            
+        document.getElementById("Chat").appendChild(node);     
+    }   
+    </script>
+</body>
+</html>
